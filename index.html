@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equilibrio Químico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧪 Calculadora de Equilibrio Químico</h1>
+
+    <form id="equilibrio-form">
+      <label>Reacción química (formato: A + B ⇌ C + D):</label>
+      <input type="text" id="reaccion" placeholder="Ej: H2 + I2 ⇌ 2HI" />
+
+      <label>Tipo de constante:</label>
+      <label><input type="radio" name="tipoK" value="Kc" checked /> Kc</label>
+      <label><input type="radio" name="tipoK" value="Kp" /> Kp</label>
+
+      <h3>Concentraciones iniciales (mol/L):</h3>
+      <div class="concentraciones">
+        <input type="text" id="concA" placeholder="[A]" />
+        <input type="text" id="concB" placeholder="[B]" />
+        <input type="text" id="concC" placeholder="[C]" />
+        <input type="text" id="concD" placeholder="[D]" />
+      </div>
+
+      <button type="button" onclick="calcularEquilibrio()">Calcular</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
